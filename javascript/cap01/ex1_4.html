@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercício 04</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h2>Tipos de dados</h2>
+
+  <div class="resultado" id="resultado"></div>
+
+<script>
+  const data = new Date()
+
+  const fruta = 'Melancia'
+  const preco = 9.90
+  const entrega = true
+  let novoValor
+
+  function resultado() {
+    lista = document.getElementById('resultado').innerHTML = 
+    `<h3>Produto: ${fruta} | Valor R$: ${preco.toFixed(2)} | Entrega: ${entrega} | ${novoValor}</h3>
+    Data: ${data}`
+    return
+    
+  }
+
+  resultado()
+</script>
+</body>
+</html>

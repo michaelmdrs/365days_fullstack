@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número vizinhos</title>
+</head>
+<body>
+    <h1>Brincado com os números!</h1>
+    <a href="https://www.w3schools.com">This is link</a>
+    <p>Vamos descobrir quais números são seus vizinhos.</p>
+    <label>Digite um número inteiro:</label>
+    <input id="numero" type="text" placeholder="Digite um número...">
+    <button onclick="exibirResultado()">Resultado</button>
+    <div id="resultado"></div>
+<script>
+    const resultado = document.getElementById('resultado')
+
+    function exibirResultado() {
+        let numero = document.getElementById('numero').value
+        let numeroDigitado =Number(numero)
+
+        let numeroPosterior = numeroDigitado + 1
+        let numeroAnterior = numeroDigitado - 1
+
+        if (numero == '') {
+            resultado.innerHTML = `
+            <h3 style="color: red"; font-size="16">Digite um número inteiro válido.</h3>` 
+        }
+        else {
+            resultado.innerHTML = `
+            <h3 style="color: green"; font-size="16">Número: ${numero}</h3>
+            <h4 style="color: blue";>Vizinhos: ${numeroAnterior} | ${numeroPosterior}</h4>`
+        }
+    }
+</script>
+</body>
+</html>

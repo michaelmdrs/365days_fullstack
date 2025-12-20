@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Viagem</title>
+</head>
+<body>
+    <h1>Planeje seu tempo de viagem</h1>
+    <section id="getHours">
+        <form>
+            <fieldset>
+                <legend>Informação da viagem</legend>
+                <label>Nº dias</label>
+                <input id="dias" type="text" placeholder="Digite apenas números...">
+                <label>Nº horas</label>
+                <input id="horas" type="text" placeholder="Digite apenas números...">
+                <button onclick="calularDias()">Calcular</button>
+            </fieldset>
+            <section>
+                <div id="resultado"></div>
+            </section>
+        </form>
+    </section>
+
+    <script>
+        const resultado = document.getElementById('resultado')
+
+        function calularDias() {
+            const totalDias = document.getElementById('dias').value
+            const totalHoras = document.getElementById('horas').value
+
+            const dias = Number(totalDias)
+            const horas = Number(totalHoras)
+            const totalDiasHoras = (dias * 24) + horas  
+
+
+            if (totalDias == '' || totalHoras == '') {
+                resultado.innerHTML = `<h3 style="color: red"; font-size="18px;">Preencha os campos para obter o resultado</h3>`
+                return
+            }
+            else if (dias > 0 && horas > 0) {
+                resultado.innerHTML = `<h3 style="color: green"; font-size="18px;">Total horas: ${totalDiasHoras}</h3>`
+            }
+
+        }
+    </script>
+</body>
+</html>

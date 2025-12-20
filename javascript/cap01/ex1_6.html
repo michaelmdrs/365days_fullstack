@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Dobro do número</title>
+</head>
+<body>
+    <h2>Somando números</h2>
+    <label>Digite um número: </label>
+    <input id="firstNumeroInput" type="text" placeholder="Digite um número...">
+    <small>+</small>
+    <input id="lastNumeroInput" type="text" placeholder="Digite um número...">
+    <button onclick="soma()">Obter resultado</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="resultado"></div>
+
+<script>
+    const resultado = document.getElementById('resultado')
+
+    function soma() {
+        const firstNumber = document.getElementById('firstNumeroInput').value
+        const lastNumber = document.getElementById('lastNumeroInput').value
+
+        let number1 = Number(firstNumber)
+        let number2 = Number(lastNumber)
+
+        if (firstNumber === '' && lastNumber === '') {
+            resultado.innerHTML = `<p style="color: red;">Digite um número para obter o resultado!</p>`
+            return
+            limpar()
+        }
+        else if (number1, number2) {
+            res = number1 + number2
+            resultado.innerHTML = `<p style="color: green;">${number1} + ${number2} = ${res}</p>`
+        }
+        else {
+            alert('Digite um número válido!')
+        }
+    }
+    
+    function limpar() {
+        const numeroInput = document.getElementById('firstNumeroInput').value = ''
+        const fnumeroInput = document.getElementById('lastNumeroInput').value = ''
+        resultado.innerText = ''
+    }
+</script>
+</body>
+</html>

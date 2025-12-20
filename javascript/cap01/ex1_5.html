@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5 - Dobro do número</title>
+</head>
+<body>
+    <h2>Dobro do Número</h2>
+    <label>Digite um número: </label>
+    <input id="numeroInput" type="text" placeholder="Digite um número...">
+    <button onclick="dobroDoNumero()">Obter resultado</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="resultado"></div>
+
+<script>
+    const resultado = document.getElementById('resultado')
+
+    
+
+    function dobroDoNumero() {
+        const numero = document.getElementById('numeroInput').value
+        let multiplo = Number(numero) * 2
+
+        if (numero === '' || numero.trim() === '') {
+            resultado.innerHTML = `<p style="color: red;">Digite um número para obter o resultado!</p>`
+            return
+            limpar()
+        }
+        if (Number.isInteger(multiplo)) {
+            resultado.innerText = `O dobro de ${numero} é ${multiplo}`
+        } 
+        else {
+            alert('Digite um número válido')
+        }
+    }
+    
+    function limpar() {
+        const numeroInput = document.getElementById('numeroInput').value = ''
+        resultado.innerText = ''
+    }
+</script>
+</body>
+</html>

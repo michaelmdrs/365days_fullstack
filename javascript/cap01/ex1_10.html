@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eComanda - Administrador</title>
+</head>
+<body>
+    <h1>Gestão de Comandas</h1>
+    <section id="valores">
+        <div class="consumo">
+            <label for="">Valor da conta R$:</label>
+            <input type="text" id="valorConta" placeholder="Valor da Conta em R$">
+            <label>Número de Clientes:</label>
+            <input type="text" id="numeroClientes" placeholder="Número de pessoas...">
+            <button onclick="valorTotal()">Calcular valor</button>
+        </div>
+        <div id="resultado"></div>
+    </section>
+<script>
+    const resultado = document.getElementById('resultado')
+
+    function valorTotal() {
+        const valorConta = document.getElementById('valorConta').value
+        const numeroClientes = document.getElementById('numeroClientes').value
+        
+        let somaDaConta = Number(valorConta)
+        let qtdCliente = Number(numeroClientes)
+        let valorTotalComanda = somaDaConta / qtdCliente
+
+        const tValorConta = resultado.innerText = `
+        Valor da Conta R$: ${somaDaConta.toFixed(2)}
+        ====================
+        Número de Clientes: ${qtdCliente}
+        ====================
+        Valor por cliente R$: ${valorTotalComanda.toFixed(2)}
+        `
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Virutal</title>
+</head>
+<body>
+    <style>
+        .main {
+            border: 1px solid gray;
+            padding: 10px;
+            max-width: 500px;
+            height: 350px;
+            text-align: center;
+        }
+
+        .nota1 {
+            margin-bottom: 15px;
+        }
+
+        .nota2 {
+            margin-bottom: 30px;
+        }
+    </style>
+    <main class="main">
+        <h1>Boletim Virtual &cudarrl;</h1>
+        <div class="nota1">
+            <label for="nota1">1ª Nota:</label>
+            <input type="number" name="nota1" id="nota1" placeholder="Digite a 1ª nota...">
+        </div>
+
+        <div class="nota2">
+            <label for="nota2">2ª Nota:</label>
+            <input type="number" name="nota2" id="nota2" placeholder="Digite a 2ª nota...">
+        </div>
+        <button onclick="calcularMedia()">Calcular nota</button>
+        <button onclick="limpar()">Limpar Dados</button>
+
+        <div id="media"></div>
+    </main>
+
+    <script>
+        const media = document.getElementById('media');
+
+        function calcularMedia() {
+            const nota1 = document.getElementById('nota1').value;
+            const nota2 = document.getElementById('nota2').value;
+            
+            const nta1 = Number(nota1);
+            const nta2 = Number(nota2);
+            const mediaAluno = (nta1 + nta2) / 2;
+
+            if (!nota1 || nota2 <= 0) {
+                media.innerHTML = '<h2 style="color: red;">Por favor, insira um valor válido.</h2>';
+                return
+            }
+            else if (mediaAluno == 0 || mediaAluno <= 5) {
+                media.innerHTML = `
+                <p><strong>1ª Nota:</strong> ${nta1}</p>
+                <p><strong>2ª Nota:</strong> ${nta2}</p>
+                <p><strong>Média:</strong> ${mediaAluno.toFixed(1)}</p>
+                <p style="color: orange;"><strong>Status: Aluno(a) REPROVADO</strong></p>
+                `
+            }
+            else if (mediaAluno >= 5 && mediaAluno <= 7) {
+                media.innerHTML = `
+                <p><strong>1ª Nota:</strong> ${nta1}</p>
+                <p><strong>2ª Nota:</strong> ${nta2}</p>
+                <p><strong>Média:</strong> ${mediaAluno.toFixed(1)}</p>
+                <p style="color: orange;"><strong>Status: Aluno(a) em RECUPERAÇÃO</strong></p>
+                `
+            }
+            else if (mediaAluno >= 7 && mediaAluno <= 10) {
+                media.innerHTML = `
+                <p><strong>1ª Nota:</strong> ${nta1}</p>
+                <p><strong>2ª Nota:</strong> ${nta2}</p>
+                <p><strong>Média:</strong> ${mediaAluno.toFixed(1)}</p>
+                <p style="color: green;"><strong>Status: Aluno(a) aprovado com EXCELÊNCIA</strong></p>
+                `
+            }
+            else {
+                media.innerHTML = `<h2>ALUNO SEM NOTA! POR FAVOR, DIGITE AS NOTAS!</h2>`
+            }
+        }
+    function limpar() {
+            nota1 = document.getElementById('nota1').value = ''
+            nota2 = document.getElementById('nota2').value = ''
+            media.innerHTML = ''
+        }
+    </script>
+</body>
+</html>

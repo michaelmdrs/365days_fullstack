@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSoftPlus - Venda de Varejo</title>
+</head>
+<body>
+    <h1>eSoftPlus</h1>
+    <div>
+        <label for="preco">Preço R$</label>
+        <input type="number" id="preco" placeholder="Digite o valor">
+    </div>
+
+    <div>
+        <label for="opcaoPagamento">Forma de pagamento:</label>
+        <select id="opcaoPagamento">
+            <option value="">Escolha a opção de pagamento</option>
+            <option value="avista">À vista</option>
+            <option value="parcelado">Parcelado em (3x)</option>
+        </select>
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Finalizar</button>
+
+    <div id="valorTotal"></div>
+
+<script>
+    const resultado = document.getElementById('valorTotal')
+
+    function calcular() {
+        const fValor = document.getElementById('preco').value
+        const opcaoPagamento = document.getElementById('opcaoPagamento').value
+        const pValor = Number(fValor)
+        
+        pValor.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        })
+
+
+        if (!pValor || pValor <= 0) {
+        resultado.innerText = "Por favor, insira um valor válido."
+        return
+        }
+
+        let resumo = ''
+
+        if (opcaoPagamento == 'avista') {
+            const precoAVista = pValor - (pValor * 0.10)
+            resumo = `
+            <p><strong>Valor original R$:</strong> ${pValor.toFixed(2)}</p>
+            <p><strong>À vista com 10% de desconto R$:</strong> ${precoAVista.toFixed(2)}</p>
+            `
+        }else if (opcaoPagamento == 'parcelado') {
+            const valorParcelado = pValor / 3
+            resumo = `
+            <p><strong>Valor original</strong> R$:${pValor.toFixed(2)}</p>
+            <p><strong>Parcelado</strong> (3x) de R$: ${valorParcelado.toFixed(2)}</p>
+            <p><strong>Total</strong>: R$ ${pValor.toFixed(2)}</p>
+            `
+        }
+
+        resultado.innerHTML = resumo
+    }
+
+    function limpar() {
+        const finalizar = document.getElementById('preco').value = ''
+        resultado.innerHTML = ''
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Comanda</title>
+</head>
+<body>
+    <h1>Controle de Comanda - V1.0</h1>
+    <h3>Resumo de Consumo</h3>
+    <section class="valores">
+        <label>Valor de consumo R$</label>
+        <input id="inputValor" type="text" placeholder="Digite o valor R$">
+        <button onclick="calcularConsumo()">Calcular</button>
+        <h3>Resumo do Consumo</h3>
+        <div class="valorTotal"></div>
+    </section>
+<script>
+    const valorTotal = document.querySelector('.valorTotal')
+
+    function calcularConsumo() {
+        const inputValue = document.getElementById('inputValor').value
+
+        let valor  = Number(inputValue)
+        let percentGarcom = valor * 0.10
+        let total = valor + percentGarcom
+
+        if (inputValue === '') {
+            valorTotal.innerHTML = `<h3 style="color: red;">Digite valor em R$ para obter o resultado.</h3>`
+            return
+        } else{
+            valorTotal.innerHTML = `
+            <p>Valor do jantar R$: ${valor.toFixed(2)}</p>
+            <p>Taxa do Garçom R$: ${percentGarcom.toFixed(2)}</p>
+            <h3>Total a pagar R$: ${total.toFixed(2)}</h3>
+        `
+        }
+    }
+    function limpar() {
+        const valor = document.getElementById('inputValor').value =''
+    }
+</script>
+</body>
+</html>
