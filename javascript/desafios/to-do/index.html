@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<link rel="stylesheet" href="./style.css">
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+	<title>Projeto To-Do</title>
+</head>
+<body>
+	<main class="w-full max-w-750 p-20 justify-items-center">
+		<h1 class="my-5 text-3xl font-bold">TODO LIST</h1>
+		<div class="task flex flex-row gap-4 justify-items-center items-center">
+			<input class="border-2 border-indigo-500 w-150 max-w-300 m-1 p-2 rounded-md text-lg" type="text" id="task" placeholder="Digite sua tarefa...">
+			<button onclick="addTask() "class="bg-[#6C63FF] pointer-events-auto hover:bg-green-700 text-white p-2 h-11 w-60 max-w-100 rounded-md text-1xl">
+				Adicionar Tarefa <i class="fi fi-rr-add"></i>
+			</button>
+		</div>
+		<section class="text-2xl m-10 p-10 h-100 w-200 flex flex-col" id="listTask"></section>
+	</main>
+<script src="./script.js"></script>
+</body>
+</html>
