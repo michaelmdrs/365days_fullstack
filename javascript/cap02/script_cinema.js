@@ -20,7 +20,7 @@ btnConverter.addEventListener('click', (e) => {
     } else {
 
         const converterHora = Math.floor(parseInt(frmHorasMinutos / 60));
-        const converterMinutos = Math.round(parseInt(frmHorasMinutos % 60));
+        const converterMinutos = parseInt(frmHorasMinutos % 60);
     
         resTitulo.innerHTML = `Título do Filme: ${frmTitulo}`
         resTempo.innerHTML += `Tempo: ${converterHora} hora(s) e ${converterMinutos} minutos.`;
