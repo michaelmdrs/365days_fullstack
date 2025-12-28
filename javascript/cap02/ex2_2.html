@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Cine JS - Admin</title>
+</head>
+<body class="text-black flex flex-col items-center justify-center p-4">
+    <form class="m-auto flex flex-col justify-center items-center glass-effect w-full max-w-2xl p-8 shadow-2xl">
+        <h1 class="text-3xl font-bold p-10 text-red-800">Cine JS: Filmes em Cartaz</h1>
+        <p>
+            <span class="text-1xl">Título do Filme:</span>
+            <input class="bg-gray-100 text-1xl w-80 p-1 rounded-1xl" id="inputTitulo" type="text" placeholder="Digite o título do filme..." autofocus>
+        </p>
+        <p class="my-5">
+            Duração:
+            <input class="bg-gray-100 text-1xl w-80 p-1 rounded-1xl" id="inputTempo" type="text" placeholder="Digite os minutos..." autofocus>
+        </p>
+        <div class="flex gap-8 justify-center align-items-center m-5">
+            <button class="w-50 bg-sky-500 text-white p-3 rounded-2xl" id="btnConversor" type="submit">Converter</button>
+            <button class="w-50 bg-red-600 text-white p-3 rounded-2xl" id="limpar" type="submit">Limpar</button>
+        </div>
+    </form>
+    <div class="font-bold flex flex-col justify-center items-center my-10 glass-effect w-full max-w-2xl p-8 shadow-2xl">
+        <h3 class="text-red-800 text-3xl" id="outputTitulo"></h3>
+        <h4 class="text-black text-3xl" id="outputTempoConvertido"></h4>
+    </div>
+    <footer>
+        <p>Criado com JavaScript 💖 - 2025</p>
+    </footer>
+<script src="./script_cinema.js"></script>
+</body>
+</html>
