@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Revenda Car Web - JS</title>
+</head>
+<body>
+    <main class="flex flex-col justify-items-center items-center p-20">
+        <h1 class="text-center text-2xl p-10 text-cyan-700">Revenda de Veículos JS</h1>
+        <form class="grid grid-flow-col grid-rows-2 gap-4 m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4">
+            <p>
+                <span class="text-xl">Veiculo:</span>
+                <input class="p-2 w-100 bg-gray-100 rounded-xl" type="text" id="inputVeiculo" placeholder="Digite o modelo do veículo..." autofocus>
+            </p>
+            <p>
+                <span class="text-xl">Preço R$:</span>
+                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="number" id="inputPreco" placeholder="Digite o valor R$...">
+            </p>
+            <p>
+                <span class="text-xl">Ano:</span>
+                <input class="p-2 w-50 bg-gray-100 rounded-xl" type="number" id="inputAnoVeiculo" placeholder="Ano do veículo..">
+            </p>
+            <button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer" type="submit" id="btnPromocao">Ver promoção</button>
+            <p></p>
+            <button class="bg-red-700 text-white rounded-md hover:bg-red-800 cursor-pointer" type="submit" id="btnLimpar">Limpar</button>
+        </form>
+        <div id="resultado" class="flex flex-col w-full max-w-4xl justify-items-center items-center p-20">
+
+        </div>
+    </main>
+<script src="./ex2_3.js"></script>
+</body>
+</html>
