@@ -30,6 +30,8 @@ const formatarMoeda = (valor) =>
 
 btnLimpar.addEventListener('click', (e) => {
     res.innerHTML = '';
-
+    veiculo.value = '';
+    anoVeiculo.value = '';
+    precoVeiculo.value = '';
     e.preventDefault();
 })
