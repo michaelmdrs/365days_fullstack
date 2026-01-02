@@ -4,6 +4,20 @@ const btnFrm = document.getElementById('btnCalcular');
 const btnLiberarTempo = document.getElementById('btnLiberar');
 const resultado = document.getElementById('resultado');
 
+
+
+function updateHora() {
+    const data = new Date();
+    const hora = data.getHours();
+    const minuto = data.getMinutes();
+    const segundo = data.getSeconds();
+    const horaFormatada = `${hora < 10 ? '0' + hora : hora}:${minuto < 10 ? '0' + minuto : minuto}:${segundo < 10 ? '0' + segundo : segundo}`;
+    document.getElementById('hora').innerHTML = horaFormatada;
+    
+}
+
+setInterval(updateHora, 1000);
+
 btnFrm.addEventListener('click', (e) => {
     const valorPorMin = Number(frmValor.value);
     const tempoUsado = Number(frmTempo.value);
@@ -23,7 +37,10 @@ btnFrm.addEventListener('click', (e) => {
     }
 
     resultado.innerHTML = `
-    <h3>Valor a Pagar ${formataMoeda(valor)}</h3>
+    <div class="text-2xl text-center m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4 bg-blue-200">
+        <h3 class="font-bold text-cyan-800">Valor a Pagar ${formataMoeda(valor)}</h3>
+    </div>
+    
     `
     frmValor.focus();
     frmValor.value = '';

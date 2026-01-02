@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Easy Soft - Lan House</title>
 </head>
 <body>
-    <main>
-        <h1>LanHouse JS</h1>
-        <form>
+    <main class="flex flex-col justify-items-center items-center p-20">
+        <h1 class="text-center text-3xl p-10 text-blue-900 font-bold">LanHouse JS</h1>
+        <div class="text-4xl font-bold text-blue-800" id="hora"></div>
+        <form class="grid grid-flow-col grid-rows-2 gap-4 m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4">
             <p>
                 Tempo de 15min Valor R$:
-                <input type="number" id="inValor" placeholder="Valor R$..." required step="0.01">
+                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="number" id="inValor" placeholder="Valor R$..." required step="0.01">
             </p>
             <p>
                 Tempo de uso (Cliente):
-                <input type="number" id="inTempo" placeholder="Tempo de uso..." min="0">
+                <input class="p-2 w-60 bg-gray-100 rounded-xl" type="number" id="inTempo" placeholder="Tempo de uso..." min="0">
             </p>
-            <button id="btnCalcular">Calcular Tempo</button>
-            <button id="btnLiberar">Liberar Tempo</button>
+            <button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer" id="btnCalcular">Calcular Tempo</button>
+            <button class="bg-red-700 text-white rounded-md hover:bg-red-800 cursor-pointer" id="btnLiberar">Liberar Tempo</button>
         </form>
-        <div id="resultado"></div>
+        <div class="flex flex-col w-full max-w-4xl justify-items-center items-center p-20" id="resultado"></div>
     </main>
+    <footer class="text-center text-gray-800">
+        <p>Desenvolvido com <span class="text-yellow-600">JS 💛</span> - 2026&copy;</p>
+    </footer>
 <script src="./ex2_6.js"></script>
 </body>
 </html>
