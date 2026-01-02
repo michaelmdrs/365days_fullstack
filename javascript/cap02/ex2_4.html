@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <h1>Restaurante - JS</h1>
-        <form>
+    <main class="flex flex-col justify-items-center items-center p-20">
+        <h1 class="text-center text-3xl p-10 text-orange-700">Restaurante - JS</h1>
+        <form class="grid grid-flow-col grid-rows-2 gap-4 m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4">
             <p>
-                Buffet por Kg:
-                <input type="number" id="inQuilo" placeholder="Valor do Kg...">
+                <span class="text-xl">Buffet por Kg:</span>
+                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="number" id="inQuilo" placeholder="Valor do Kg..." min="0" step="0.01">
             </p>
             <p>
-                Consumo por cliente (gr):
-                <input type="number"  id="inConsumo" min="0">
+                <span class="text-xl">Consumo por cliente (gr):</span>
+                <input class="p-2 w-50 bg-gray-100 rounded-xl" type="number"  id="inConsumo" min="0" placeholder="Digite a grama...">
             </p>
-            <button id="btnCalcular">Calcular</button>
+            <button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer" id="btnCalcular">Calcular</button>
+            <button class="bg-red-700 text-white rounded-md hover:bg-red-800 cursor-pointer" id="btnNovoCalculo">Novo Cálculo</button>
         </form>
-        <div id="resultado"></div>
+        <div class="flex flex-col w-full max-w-4xl justify-items-center items-center p-20" id="resultado"></div>
     </main>
+<script src="./ex2_4.js"></script>
 </body>
 </html>
