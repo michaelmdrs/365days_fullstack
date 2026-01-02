@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Soft - Lan House</title>
+</head>
+<body>
+    <main>
+        <h1>LanHouse JS</h1>
+        <form>
+            <p>
+                Tempo de 15min Valor R$:
+                <input type="number" id="inValor" placeholder="Valor R$..." required step="0.01">
+            </p>
+            <p>
+                Tempo de uso (Cliente):
+                <input type="number" id="inTempo" placeholder="Tempo de uso..." min="0">
+            </p>
+            <button id="btnCalcular">Calcular Tempo</button>
+            <button id="btnLiberar">Liberar Tempo</button>
+        </form>
+        <div id="resultado"></div>
+    </main>
+<script src="./ex2_6.js"></script>
+</body>
+</html>
