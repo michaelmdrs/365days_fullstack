@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Pet Control</title>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-3xl shadow-xl overflow-hidden">
+        <div class="bg-blue-600 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold uppercase tracking-wider">Pet Control 🐾</h1>
+            <p class="text-blue-100 text-sm">Gerencie a ração do seu melhor amigo</p>
+        </div>
+
+        <div class="p-6 space-y-4">
+            <div>
+                <label class="block text-gray-700 text-sm font-semibold mb-1">Peso do Pacote (kg)</label>
+                <input type="number" id="pesoTotal" placeholder="Ex: 2"
+                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm font-semibold mb-1">Consumo diário (gr)</label>
+                <input type="number" id="consumoDiario" placeholder="Ex: 300"
+                class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
+            </div>
+
+            <button onclick="calcular()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition-all">
+                Calcular Estoque
+            </button>
+            <button onclick="limpar()" class="w-full bg-orange-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl shadow-lg transform active:scale-95 transition-all">Limpar</button>
+        </div>
+
+        <div id="resultado" class="hidden p-6 bg-blue-50 border-t border-blue-100">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                    <p class="text-gray-500 text-xs uppercase">Duração</p>
+                    <p class="text-2xl front-bold text-blue-600" id="resDias">0 dias</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-500 text-xs uppercase">Sobra</p>
+                    <p class="text-2xl front-bold text-blue-600" id="resSobra">0g</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
