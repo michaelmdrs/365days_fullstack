@@ -12,11 +12,11 @@
         <form class="grid grid-flow-col grid-rows-2 gap-4 m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4">
             <p>
                 1ª Nota:
-                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="text" id="inNota1" placeholder="Digite a nota ex: (7.1)" required>
+                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="text" id="inNota1" placeholder="Digite a nota ex: (7.1)" required step="0.1" min="0" max="10">
             </p>
             <p>
                 2ª Nota:
-                <input class="p-2 w-60 bg-gray-100 rounded-xl" type="text" id="inNota2" placeholder="Digite a nota ex: (5.5)" required>
+                <input class="p-2 w-60 bg-gray-100 rounded-xl" type="text" id="inNota2" placeholder="Digite a nota ex: (5.5)" required step="0.1" min="0" max="10">
             </p>
             <button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer" id="btnCalcular">Exibir Resultado</button>
             <button class="bg-red-700 text-white rounded-md hover:bg-red-800 cursor-pointer" id="btnLimpar">Nova pesquisa</button>
