@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Controle do aluno - JS</title>
+</head>
+<body>
+    <main class="flex flex-col justify-items-center items-center p-20">
+        <h1 class="text-center text-3xl p-10 text-blue-900 font-bold">Sitação do Aluno</h1>
+        <form class="grid grid-flow-col grid-rows-2 gap-4 m-auto glass-effect w-full max-w-4xl p-8 shadow-2xl text-1xl gap-4">
+            <p>
+                1ª Nota:
+                <input class="p-2 w-95 bg-gray-100 rounded-xl" type="text" id="inNota1" placeholder="Digite a nota ex: (7.1)" required>
+            </p>
+            <p>
+                2ª Nota:
+                <input class="p-2 w-60 bg-gray-100 rounded-xl" type="text" id="inNota2" placeholder="Digite a nota ex: (5.5)" required>
+            </p>
+            <button class="bg-blue-500 text-white rounded-md hover:bg-blue-600 cursor-pointer" id="btnCalcular">Exibir Resultado</button>
+            <button class="bg-red-700 text-white rounded-md hover:bg-red-800 cursor-pointer" id="btnLimpar">Nova pesquisa</button>
+        </form>
+        <div class="flex flex-col w-full max-w-4xl justify-items-center items-center p-20" id="resultado"></div>
+    </main>
+    <footer class="text-center text-gray-800">
+        <p>Desenvolvido com <span class="text-yellow-600">JS 💛</span> - 2026&copy;</p>
+    </footer>
+<script src="./ex4_1.js"></script>
+</body>
+</html>
