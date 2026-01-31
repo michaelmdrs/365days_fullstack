@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Fuso Horário - JS</title>
+    </head>
+
+    <body class="bg-slate-100 font-sans">
+        <header class="bg-sky-700 text-white text-3xl font-bold shadow-lg">
+            <div class="max-5-5xl mx-auto py-4 text-center">Programa Fuso Horário</div>
+        </header>
+
+        <div class="bg-sky-700 text-white text-5xl font-bold shadow-lg">
+            <div id="hora" class="max-5-5xl mx-auto py-2 text-center"></div>
+        </div>
+
+        <main class="flex items-center justify-center p-6">
+            <div class="bg-white rounded-2xl shadow-xl max-w-5xl w-full p-8">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    <!-- Imagem -->
+                    <div class="flex justify-center">
+                        <img src="./img/ex4_4.jpg" alt="Mapa de fusos horários" class="w-56 md:w-72" />
+                    </div>
+
+                    <!-- Controles -->
+                    <div class="space-y-6">
+
+                        <label class="block text-sm font-semibold text-slate-700">
+                            Selecione o país
+                        </label>
+
+                        <select id="timezone"
+                            class="w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-700 focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                            <option value="">------ Selecione ------</option>
+                            <option value="America/Sao_Paulo">Brasil (São Paulo)</option>
+                            <option value="Europe/Lisbon">Portugal</option>
+                            <option value="Europe/Paris">França (Paris)</option>
+                            <option value="Europe/London">Reino Unido</option>
+                            <option value="America/New_York">EUA (Nova York)</option>
+                            <option value="Asia/Tokyo">Japão</option>
+                        </select>
+
+                        <!-- Botões -->
+                        <div class="flex gap-4">
+                            <button id="showTimeBtn" type="button"
+                                class="flex-1 bg-sky-600 text-white py-2 rounded-lg hover:bg-sky-700 transition">
+                                Exibir Fuso Horário
+                            </button>
+
+                            <button id="showClean" type="reset"
+                                class="flex-1 border border-slate-300 py-2 rounded-lg text-slate-700 hover:bg-slate-100 transition">
+                                Novo Fuso Horário
+                            </button>
+                        </div>
+
+                        <!-- Resultado -->
+                        <div id="showTime" class="text-center text-lg font-semibold text-slate-800 pt-4">
+                            Fuso Horário
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./ex4_3.js"></script>
+    </body>
+
+</html>
