@@ -30,6 +30,7 @@ btnResult.addEventListener('click', (e) => {
 
     if (frmCash % 10 !== 0) {
         alert("Valor inválido. Use múltiplos de 10.");
+        novaTransicao();
         return;
     } 
 
