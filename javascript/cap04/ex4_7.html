@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Controle de Velocidade - JS</title>
+    </head>
+    <body>
+        <header class="bg-red-700 text-white text-3xl font-bold shadow-lg">
+            <div class="max-5-5xl mx-auto py-4 text-center">Controle de Velocidade</div>
+        </header>
+
+        <main class="flex items-center justify-center p-6">
+            <div class="bg-white rounded-2xl shadow-xl max-w-5xl w-full p-8">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    <!-- Imagem -->
+                    <div class="flex justify-center">
+                        <img src="./img/exerc.jpg" alt="Imagem de números coloridos de 0 a 9" class="w-56 md:w-72" />
+                    </div>
+
+                    <!-- Controles -->
+                    <div class="space-y-6">
+
+                        <label class="block text-sm font-semibold text-slate-700">
+                            Velocidade Permitida:
+                        </label>
+
+                        <input 
+                        class="shadow appearance-none border border-slate-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        type="number"
+                        id="velPermitida"
+                        min="0"
+                        autofocus
+                        >
+
+                        <label class="block text-sm font-semibold text-slate-700">
+                            Velocidade do Condutor:
+                        </label>
+
+                        <input 
+                        class="shadow appearance-none border border-slate-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                        type="number"
+                        id="velCondutor"
+                        min="0"
+                        autofocus
+                        >
+
+                        <!-- Botões -->
+                        <div class="flex gap-4">
+                            <button id="btnResult" type="button"
+                                class="flex-1 bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition">
+                                Analisar Velocidade
+                            </button>
+
+                            <button onclick="limpaTela()" id="btnClean" type="reset"
+                                class="flex-1 border border-purple-300 py-2 rounded-lg text-slate-700 hover:bg-purple-100 transition">
+                                Nova Análise
+                            </button>
+                        </div>
+
+                        <!-- Resultado -->
+                        <div id="showResult" class="text-justify text-lg font-semibold text-slate-800 pt-4">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+<script src="./ex4_7.js"></script>
+</html>
