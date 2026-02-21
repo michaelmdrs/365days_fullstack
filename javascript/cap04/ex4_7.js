@@ -9,16 +9,17 @@ btnVel.addEventListener('click', () => {
     const limitePermitido = Number(velPermitida.value);
     const infracaoAplicada = Number(velCondutor.value);
     const INFRACAO_20 = infracaoAplicada * 0.8;
+    const INFRACAO_40 = infracaoAplicada * INFRACAO_20;
 
     if(isNaN(velPermitida) || velCondutor <= 0) {
         showResult.innerHTML = `<h2 class="text-red-700">Ops, algo deu errado! Informe a velocidade permitida.</h2>`;
     }
 
-    if(limitePermitido <= infracaoAplicada) {
-        showResult.innerHTML = `<h2 class="text-green-700">Sem Multa.</h2>`;
-        console.log(infracaoAplicada + INFRACAO_20)
-        return
-    }
+    if(limitePermitido <= INFRACAO_20) {
+        showResult.innerHTML = `<h2>Multa Leve.</h2>`
+  } else if (limitePermitido >= INFRACAO_40) {
+        showResult.innerHTML = `<h2>Multa Grave.</h2>`
+  }
 });
 
 function limpaTela() {
