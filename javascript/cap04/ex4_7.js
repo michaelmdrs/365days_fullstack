@@ -1,25 +1,28 @@
 const velPermitida = document.getElementById('velPermitida');
 const velCondutor = document.getElementById('velCondutor');
 const showResult = document.getElementById('showResult');
-const btnVel = document.getElementById('btnResult');
+const btnResult = document.getElementById('btnResult');
 const btnClear = document.getElementById('btnClear');
 
 // Lógica para calcular infração baseada na velocidade
-btnVel.addEventListener('click', () => {
+btnResult.addEventListener('click', () => {
     const limitePermitido = Number(velPermitida.value);
-    const infracaoAplicada = Number(velCondutor.value);
-    const INFRACAO_20 = infracaoAplicada * 0.8;
-    const INFRACAO_40 = infracaoAplicada * INFRACAO_20;
+    const limiteCondutor = Number(velCondutor.value);
 
-    if(isNaN(velPermitida) || velCondutor <= 0) {
-        showResult.innerHTML = `<h2 class="text-red-700">Ops, algo deu errado! Informe a velocidade permitida.</h2>`;
+    if(isNaN(limitePermitido) || isNaN(limiteCondutor) || limitePermitido <= 0) {
+        showResult.innerHTML = `<h2>Verifique as informações.</h2>`;
+        return;
     }
 
-    if(limitePermitido <= INFRACAO_20) {
-        showResult.innerHTML = `<h2>Multa Leve.</h2>`
-  } else if (limitePermitido >= INFRACAO_40) {
-        showResult.innerHTML = `<h2>Multa Grave.</h2>`
-  }
+    const LIMITE_MULTA_LEVE = limitePermitido * 1.2;
+
+    if(limiteCondutor <= limitePermitido) {
+        showResult.innerHTML = `<h2 class="text-green-600">SEM MULTA.</h2>`;
+    } else if(limiteCondutor <= LIMITE_MULTA_LEVE) {
+        showResult.innerHTML = `<h2 class="text-orange-600">MULTA LEVE.</h2>`;
+    } else {
+        showResult.innerHTML = `<h2 class="text-red-600">MULTA GRAVE.</h2>`;
+    }
 });
 
 function limpaTela() {
