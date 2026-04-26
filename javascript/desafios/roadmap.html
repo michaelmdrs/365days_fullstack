@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Roadmap Python para Iniciantes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            padding: 40px 20px;
+            color: #1e1e2f;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #306998;
+            border-left: 8px solid #FFD43B;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .subtitulo {
+            color: #555;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            padding-left: 28px;
+        }
+        h2 {
+            background-color: #306998;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            margin: 30px 0 20px 0;
+        }
+        h3 {
+            color: #306998;
+            margin: 25px 0 10px 0;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #FFD43B;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #f9f9fc;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #306998;
+            color: white;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .badge {
+            background-color: #FFD43B;
+            color: #1e1e2f;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .dica {
+            background-color: #e7f3ff;
+            border-left: 6px solid #306998;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        a {
+            color: #306998;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .badge {
+                background-color: #FFD43B;
+                print-color-adjust: exact;
+            }
+            h2 {
+                background-color: #306998;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🐍 Roadmap Python para Iniciantes</h1>
+    <div class="subtitulo">Aprenda do zero com materiais 100% gratuitos – guia completo e prático</div>
+
+    <!-- Fase 0 -->
+    <h2>🧰 Fase 0 – Preparação</h2>
+    <ul>
+        <li>✅ Instalar Python em <a href="https://python.org" target="_blank">python.org</a></li>
+        <li>✅ Escolher um editor:<br>
+            <span class="badge">VS Code</span> (recomendado) •
+            <span class="badge">Thonny</span> (para iniciantes) •
+            <span class="badge">Google Colab</span> (navegador)
+        </li>
+        <li>✅ Criar uma pasta de projetos no computador</li>
+    </ul>
+
+    <!-- Fase 1 -->
+    <h2>🚀 Fase 1 – Fundamentos Básicos (2 a 4 semanas)</h2>
+    <h3>📚 Tópicos</h3>
+    <ul>
+        <li>Hello World, variáveis, tipos (int, float, string, bool)</li>
+        <li>input() / print()</li>
+        <li>Operadores aritméticos, lógicos, comparação</li>
+        <li>Condicionais: if, elif, else</li>
+        <li>Laços: for e while</li>
+    </ul>
+    <h3>🎓 Materiais gratuitos</h3>
+    <ul>
+        <li><strong>Curso em Vídeo – Python (Gustavo Guanabara)</strong><br>
+        <a href="https://youtube.com/playlist?list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6" target="_blank">🔗 Playlist completa (GRÁTIS)</a></li>
+        <li><strong>Python para Zumbis</strong> – <a href="https://pynaut.com" target="_blank">pynaut.com</a></li>
+        <li><strong>W3Schools Python</strong> – <a href="https://w3schools.com/python" target="_blank">w3schools.com/python</a></li>
+    </ul>
+
+    <!-- Fase 2 -->
+    <h2>🧠 Fase 2 – Estruturas de Dados e Funções (3 a 4 semanas)</h2>
+    <ul>
+        <li>Listas, tuplas, dicionários, conjuntos</li>
+        <li>Métodos: append(), remove(), keys(), values()</li>
+        <li>Funções (def, parâmetros, return, escopo)</li>
+        <li>List comprehensions</li>
+        <li>Tratamento de erros (try/except)</li>
+    </ul>
+    <h3>🎓 Materiais gratuitos</h3>
+    <ul>
+        <li><strong>Python.org Tutorial Oficial</strong> – <a href="https://docs.python.org/pt-br/3/tutorial" target="_blank">docs.python.org</a></li>
+        <li><strong>Exercism – Python Track</strong> – <a href="https://exercism.org/tracks/python" target="_blank">exercism.org</a></li>
+        <li><strong>CodingBat Python</strong> – <a href="https://codingbat.com/python" target="_blank">codingbat.com</a></li>
+    </ul>
+
+    <!-- Fase 3 -->
+    <h2>🛠️ Fase 3 – Arquivos e Módulos (1 a 2 semanas)</h2>
+    <ul>
+        <li>Ler/escrever arquivos .txt e .csv</li>
+        <li>Módulos nativos: math, random, datetime, os, json</li>
+        <li>Importação de módulos</li>
+    </ul>
+    <ul>
+        <li><strong>Real Python – File Handling</strong> – <a href="https://realpython.com/read-write-files-python" target="_blank">realpython.com</a></li>
+    </ul>
+
+    <!-- Fase 4 -->
+    <h2>🚧 Fase 4 – Projetos Práticos (faça enquanto aprende)</h2>
+    <ul>
+        <li>🔢 Calculadora simples</li>
+        <li>🔐 Gerador de senhas</li>
+        <li>🎮 Jogo da forca</li>
+        <li>✅ Lista de tarefas (terminal)</li>
+        <li>💱 Conversor de moedas com API</li>
+    </ul>
+    <h3>📌 Ideias e desafios</h3>
+    <ul>
+        <li><a href="https://www.freecodecamp.org/news/python-projects-for-beginners" target="_blank">FreeCodeCamp – 100+ projetos Python</a></li>
+        <li><a href="https://github.com/anandology/python-practice-book" target="_blank">Python Practice Book (GitHub)</a></li>
+    </ul>
+
+    <!-- Fase 5 -->
+    <h2>🧩 Fase 5 – Escolha um caminho</h2>
+    <table>
+        <thead>
+            <tr><th>Caminho</th><th>Tecnologias</th><th>Material gratuito</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>🌐 Web (Django/Flask)</td><td>HTML, rotas, ORM, templates</td><td><a href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django" target="_blank">MDN Django</a><br><a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">Flask Mega Tutorial</a></td></tr>
+            <tr><td>📊 Dados e IA</td><td>Pandas, NumPy, Matplotlib, scikit-learn</td><td><a href="https://kaggle.com/learn/python" target="_blank">Kaggle Learn – Python</a></td></tr>
+            <tr><td>🤖 Automação</td><td>Selenium, BeautifulSoup, requests</td><td><a href="https://automatetheboringstuff.com" target="_blank">Automate the Boring Stuff (livro gratuito)</a></td></tr>
+            <tr><td>🎮 Jogos</td><td>Pygame</td><td><a href="https://youtu.be/AY9MnQ4x3sk" target="_blank">Clear Code – Pygame (YouTube)</a></td></tr>
+        </tbody>
+    </table>
+
+    <!-- Dicas finais -->
+    <div class="dica">
+        💡 <strong>Dica de ouro:</strong> Pratique 70% do tempo. Teoria sem código não fixa aprendizado.
+    </div>
+    <div class="dica">
+        🌍 <strong>Comunidades gratuitas:</strong> r/learnpython (Reddit) • Discord Python Brasil • Stack Overflow
+    </div>
+
+    <h2>📄 Como gerar o PDF a partir deste HTML</h2>
+    <ol>
+        <li>Copie todo este código HTML</li>
+        <li>Cole no Bloco de Notas e salve como <strong>roadmap_python.html</strong></li>
+        <li>Abra o arquivo no navegador (Chrome, Edge, Firefox)</li>
+        <li>Pressione <strong>Ctrl + P</strong> (ou Cmd + P no Mac)</li>
+        <li>Escolha "Salvar como PDF" e ajuste as margens</li>
+    </ol>
+
+    <footer>
+        🐍 Roadmap criado com materiais 100% gratuitos – atualizado 2025<br>
+        Use, compartilhe e estude livremente.
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Acumuladores e Contadores - JS</title>
+</head>
+<body>
+
+    <h1>Contas do Mês </h1>
+    <img src="./img/ex5_5.jpg" alt="" class="alta">
+    <form>
+        <p>Descrição da conta:
+            <input type="text" id="inDescricao" required>
+        </p>
+        <p>Valor a Pagar:
+            <input type="number" id="inValor" min="0" step="0.01" required>
+        </p>
+        <input type="submit" value="Registrar Conta" id="inGravarConta">
+        <input type="button" value="Limpar" id="btnLimpar">
+        <input type="button" value="Exibir lista" id="btnExibir">
+    </form>
+    <pre id="outResp1"></pre>
+    <pre id="outResp2"></pre>
+    <pre id="outResp3"></pre>
+<script src="./ex6.js"></script>
+</body>
+</html>
